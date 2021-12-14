@@ -1,0 +1,25 @@
+import java.util.Random;
+
+public class Main implements Runnable {
+
+	public static void main(String[] args) {
+		Main assignment2 = new Main();
+		Thread t1 = new Thread(assignment2);
+		t1.start();
+	}
+
+	@Override
+	public void run() {
+		Random obj = new Random();
+		String colours[] = {"white", "blue", "black", "green", "red", "yellow"};
+		int index;
+		int rnd = new Random().nextInt(6);
+		String random=colours[rnd];
+		while(random!="red"){
+		    System.out.println(random);
+		    rnd = new Random().nextInt(6);
+		    random=colours[rnd];
+		}
+	}
+
+}
