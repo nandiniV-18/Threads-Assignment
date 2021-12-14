@@ -1,0 +1,15 @@
+public class Main {
+
+    public static void main(String[] args) {
+        Thread t = new Thread("Scooby");
+        t.start();  
+        String str = t.getName();  
+        System.out.println("I'm " + str);  
+
+        Thread t2 = new Thread("Shaggy");
+        t2.start();  
+        String str1 = t2.getName();  
+        System.out.println("I'm " + str1);  
+    }
+
+}
